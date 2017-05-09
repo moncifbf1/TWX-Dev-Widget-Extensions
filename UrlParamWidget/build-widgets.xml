@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="getUrlWidget" basedir="." default="build">
+
+    <property name="common"    		value="common"/>
+    <property name="ui"		     	value="ui"/>
+	<property name="config.dir"	 	value="${basedir}/configfiles" />
+	<property name="ui.dir"	 		value="${basedir}/${ui}" />
+	<property name="zip.dir" 		value="${basedir}/zip"/>
+
+	<!-- ExtensionPackage directory structure props --> 
+	<property name="package.ui.basedir" value="${ui}"/>
+	<property name="package.common.lib.dir" value="${package.lib.basedir}/${common}"/>
+	<property name="package.common.ui.dir" value="${package.ui.basedir}/${common}"/>
+
+
+	<target name="build">
+		<antcall target="build_ParamWidget"/>
+	</target>
+
+	<target name="build_ParamWidget">
+		<zip destfile="${zip.dir}/ParamWidget.zip">
+			<mappedresources>
+				<fileset dir="${ui.dir}/ParamWidget" />
+				<globmapper from="*" to="${package.ui.basedir}/ParamWidget/*"/>
+			</mappedresources>
+
+			<zipfileset dir="${config.dir}" includes="metadata_getUrlWidget.xml" fullpath="metadata.xml"/>
+		</zip>
+	</target>
+</project>
+

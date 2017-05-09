@@ -1,0 +1,30 @@
+/* Place custom CSS styling for graphWidget widget at runtime in this file */
+
+.widget-graphwidget {
+
+}
+
+.axis path, 
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+.legend {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 100%;
+}
+
+.tooltip{
+	position: absolute;
+	text-align: center;
+	width: 60px;
+	height: 28px;
+	padding: 2px;
+	font: 12px sans-serif;
+	background: lightsteelblue;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+	z-index: 100000;
+}

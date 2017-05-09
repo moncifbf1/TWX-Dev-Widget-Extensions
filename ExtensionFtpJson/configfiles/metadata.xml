@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ExtensionPackages>
+        <ExtensionPackage description="Ftp Access extension" minimumThingWorxVersion="7.1.0" name="ExtensionFtpJson" packageVersion="1.1.0" vendor="Percall">
+            <JarResources>
+                <FileResource description="" file="extensionftpjson.jar" type="JAR"/>
+                <FileResource description="" file="commons-net-3.6.jar" type="JAR"/>
+                <FileResource description="" file="json-simple.jar" type="JAR"/>
+            </JarResources>
+        </ExtensionPackage>
+    </ExtensionPackages>
+    
+    <ThingPackages>
+		<ThingPackage name="Marlink.Percall.FtpJson.Thing" description="FtpJson Extension thing" className="org.ftpjson.FtpThing" aspect.isSystemObject="false" aspect.isCreatable="true" />
+	</ThingPackages>
+	
+	<ThingTemplates>
+		<ThingTemplate name="Marlink.Percall.FtpJson.ThingTemplate" description="FtpJson Extension ThingTemplate" thingPackage="Marlink.Percall.FtpJson.Thing" aspect.isSystemObject="false" >
+			<avatar/>
+		</ThingTemplate>
+	</ThingTemplates>
+	
+</Entities>

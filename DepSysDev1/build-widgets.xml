@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PercallD3BarChart" basedir="." default="build">
+
+    <property name="common"    		value="common"/>
+    <property name="ui"		     	value="ui"/>
+	<property name="config.dir"	 	value="${basedir}/configfiles" />
+	<property name="ui.dir"	 		value="${basedir}/${ui}" />
+	<property name="zip.dir" 		value="${basedir}/zip"/>
+
+	<!-- ExtensionPackage directory structure props --> 
+	<property name="package.ui.basedir" value="${ui}"/>
+	<property name="package.common.lib.dir" value="${package.lib.basedir}/${common}"/>
+	<property name="package.common.ui.dir" value="${package.ui.basedir}/${common}"/>
+
+
+	<target name="build">
+		<antcall target="build_PercallD3BarChart"/>
+	</target>
+
+	<target name="build_PercallD3BarChart">
+		<zip destfile="${zip.dir}/PercallD3BarChart.zip">
+			<mappedresources>
+				<fileset dir="${ui.dir}/PercallD3BarChart" />
+				<globmapper from="*" to="${package.ui.basedir}/PercallD3BarChart/*"/>
+			</mappedresources>
+
+			<zipfileset dir="${config.dir}" includes="metadata.xml" fullpath="metadata.xml"/>
+		</zip>
+	</target>
+</project>
+

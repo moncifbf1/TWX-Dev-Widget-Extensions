@@ -1,0 +1,34 @@
+/* Place custom CSS styling for graphWidget widget in Composer in this file */
+
+.widget-graphwidget {
+
+}
+
+.axis path, 
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.legend {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 100%;
+}
+
+#myDiv
+{
+	width: 100%;
+	height: auto;
+  	text-align:center;
+  	background:#01054bcc;
+  	border:1px solid red;
+}
+
+#text{
+	position: relative;
+	font-size:200%;
+	color:white;
+	top:50%;
+	margin: 0 auto;
+}

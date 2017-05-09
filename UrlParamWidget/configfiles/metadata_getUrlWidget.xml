@@ -1,0 +1,21 @@
+<Entities>
+	<ExtensionPackages>
+		<ExtensionPackage name="ParamWidget" description="getParamWidget Extension"
+			vendor="Percall" packageVersion="1.0" minimumThingWorxVersion="6.0.0" />
+	</ExtensionPackages>
+
+	<Widgets>
+		<Widget name="ParamWidget">
+			<UIResources>
+				<FileResource type="JS" file="getparamurl.ide.js"
+					description="" isDevelopment="true" isRuntime="false" />
+				<FileResource type="CSS" file="getparamurl.ide.css"
+					description="" isDevelopment="true" isRuntime="false" />
+				<FileResource type="JS" file="getparamurl.runtime.js"
+					description="" isDevelopment="false" isRuntime="true" />
+				<FileResource type="CSS" file="getparamurl.runtime.css"
+					description="" isDevelopment="false" isRuntime="true" />
+			</UIResources>
+		</Widget>
+	</Widgets>
+</Entities>
